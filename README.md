@@ -48,7 +48,7 @@ For example, you only need either `elinks`, `lynx` or
 | audio | [ffmpegthumbnailer][ffmpegthumbnailer] [ffmpeg][ffmpeg] |
 | diff | [colordiff][colordiff] [delta][delta] [diff-so-fancy][diff-so-fancy] |
 | directory | ls |
-| font | fontimage |
+| font | [imagemagick][imagemagick] |
 | gpg-encrypted | [gpg][gpg] |
 | html | [elinks][elinks] [lynx][lynx] [w3m][w3m] |
 | image | [ueberzug][ueberzug] [chafa][chafa] |
@@ -56,7 +56,7 @@ For example, you only need either `elinks`, `lynx` or
 | markdown | [glow][glow] [mdcat][mdcat] |
 | office | [libreoffice][libreoffice] |
 | pdf | pdftoppm |
-| svg | convert |
+| svg | [imagemagick][imagemagick] | 
 | text | bat cat [highlight][highlight] [source-highlight][source-highlight] |
 | torrent | transmission-show |
 | video | [ffmpegthumbnailer][ffmpegthumbnailer] |
@@ -204,12 +204,11 @@ set cleaner ctpvclear
 If you use Wayland, follow these steps:
 
 * Make sure you use one of the [terminals that support sixel][sixel]
-* Install [this fork of lf][lf-sixel]
+* Add following line to your lf config
+```
+set sixel true
 * Install [Chafa][chafa]
 * Add `set chafasixel` to `~/.config/ctpv/config`
-
-As of 2023-03-19, original lf does not support sixel protocol,
-which is why you need use the fork.
 
 ## Documentation
 

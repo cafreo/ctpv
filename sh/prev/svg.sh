@@ -1,7 +1,7 @@
 # svg: convert
 
 svg() {
-	convert "$f" "jpg:$cache_f"
+	rsvg-convert -f png "${f}" -o "${cache_f}"
 }
 
 convert_and_show_image svg

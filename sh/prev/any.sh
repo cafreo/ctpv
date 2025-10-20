@@ -1,7 +1,7 @@
 # any: exiftool cat
 
 if exists exiftool; then
-	exiftool -- "$f" || true
+	exiftool -- "${f}" || true
 else
-	cat < "$f"
+	cat < "${f}" | highlight -O ansi -C "${f}"
 fi

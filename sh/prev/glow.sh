@@ -1,3 +1,3 @@
 # markdown: glow
 
-glow -s auto -w "$w"  "$f"
+glow -s auto -w "${w}"  "${f}"

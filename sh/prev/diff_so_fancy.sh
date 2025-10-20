@@ -1,3 +1,3 @@
 # diff: diff-so-fancy
 
-diff-so-fancy < "$f"
+diff-so-fancy < "${f}"

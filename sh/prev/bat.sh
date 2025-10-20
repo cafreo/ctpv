@@ -8,10 +8,10 @@ else
 	exit 127
 fi
 
-"$batcmd" \
-	--color always        \
-	--style plain         \
-	--paging never        \
-	--terminal-width "$w" \
-	--wrap character      \
-	-- "$f"
+"${batcmd}" \
+	--color always          \
+	--style plain           \
+	--paging never          \
+	--terminal-width "${w}" \
+	--wrap character        \
+	-- "${f}"

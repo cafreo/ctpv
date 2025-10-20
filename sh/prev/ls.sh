@@ -1,3 +1,3 @@
 # directory: ls
 
-ls --color --group-directories-first -- "$f"
+ls -h --color --group-directories-first -- "${f}"

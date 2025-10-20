@@ -1,3 +1,3 @@
 # archive: atool
 
-atool -l -- "$f"
+atool -l -- "${f}"

@@ -2,4 +2,4 @@
 
 setup_image
 
-send_image "$f"
+send_image "${f}"

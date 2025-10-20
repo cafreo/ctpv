@@ -1,3 +1,3 @@
 # json: jq
 
-jq -C . < "$f"
+jq -C . < "${f}"

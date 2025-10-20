@@ -1,3 +1,3 @@
 # diff: delta
 
-delta < "$f"
+delta < "${f}"

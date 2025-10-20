@@ -1,3 +1,3 @@
 # diff: colordiff
 
-colordiff < "$f"
+colordiff < "${f}"

@@ -1,3 +1,3 @@
 # html: w3m
 
-w3m -dump "$f"
+w3m -dump "${f}"

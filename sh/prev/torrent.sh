@@ -1,3 +1,3 @@
 # torrent: transmission-show
 
-transmission-show -- "$f"
+transmission-show -- "${f}"
