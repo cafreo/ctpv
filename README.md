@@ -1,6 +1,6 @@
-# ctpv
+# ctpv-fork
 
-File previewer for a terminal
+File previewer for a terminal. This fork will fix minor issues and change some of the previews.
 
 ![showcase](doc/showcase.gif)
 
@@ -45,7 +45,7 @@ For example, you only need either `elinks`, `lynx` or
 | ---- | ---- |
 | any | [exiftool][exiftool] cat |
 | archive | [ouch][ouch] |
-| audio | [ffmpegthumbnailer][ffmpegthumbnailer] [ffmpeg][ffmpeg] |
+| audio | [ffmpegthumbnailer][ffmpegthumbnailer] |
 | diff | [colordiff][colordiff] [delta][delta] [diff-so-fancy][diff-so-fancy] |
 | directory | ls |
 | font | [imagemagick][imagemagick] |
@@ -101,7 +101,7 @@ of the same libraries.
 Install:
 
 ```console
-git clone https://github.com/NikitaIvanovV/ctpv
+git clone https://github.com/cafreo/ctpv
 cd ctpv
 make
 sudo make install
@@ -207,8 +207,7 @@ If you use Wayland, follow these steps:
 * Add following line to your lf config
 ```
 set sixel true
-* Install [Chafa][chafa]
-* Add `set chafasixel` to `~/.config/ctpv/config`
+```
 
 ## Documentation
 
