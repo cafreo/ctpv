@@ -1,6 +1,7 @@
 image_method_ueberzug='U'
 image_method_kitty='K'
 image_method_chafa='C'
+
 echo_err() {
 	echo "$@" >&2
 }
@@ -35,13 +36,11 @@ is_kitty() {
 }
 
 kitty_clear() {
-	kitty +kitten icat --clear --stdin no --silent --transfer-mode file < /dev/null > /dev/tty
+	kitty +kitten icat --clear --stdin no --silent --transfer-mode memory < /dev/null > /dev/tty
 }
 
 fifo_open() {
-	# https://unix.stackexchange.com/a/522940/183147
-	dd oflag=nonblock conv=notrunc,nocreat count=0 of="$1" \
-		>/dev/null 2>/dev/null
+	dd oflag=nonblock conv=notrunc,nocreat count=0 of="$1" >/dev/null 2>/dev/null
 }
 
 set_image_method() {
@@ -86,9 +85,9 @@ setup_image() {
 	[ "${image_method}" = "${image_method_ueberzug}" ] && setup_fifo "$@"
 }
 
-kitty_icat_pid() {
-	printf '/tmp/ctpvicat.%d' "${id}"
-}
+#kitty_icat_pid() {
+#	printf '/tmp/ctpvicat.%d' "${id}"
+#}
 
 send_image() {
 	noimages && return 127
@@ -100,9 +99,9 @@ send_image() {
 			return 1
 			;;
 		"${image_method_kitty}")
-			kitty +kitten icat --silent --stdin no --transfer-mode file \
+			kitty +kitten icat --silent --stdin no --transfer-mode memory \
 				--place "${w}x${h}@${x}x${y}" "$1" < /dev/null > /dev/tty &
-			printf '%d\n' "$!" > "$(kitty_icat_pid)"
+			#printf '%d\n' "$!" > "$(kitty_icat_pid)" 
 			return 1
 			;;
 		"${image_method_chafa}")
