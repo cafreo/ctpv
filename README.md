@@ -189,8 +189,9 @@ emerge --ask --verbose app-misc/ctpv
 
 ### lf file manager
 
-Add these lines to your lf config (for version r38 or lower you don't need to disable preload)
+Add these lines to your lf config
 (usually located at `~/.config/lf/lfrc`).
+For version r38 or lower you don't need to disable preload.
 
 ```
 set preload false
