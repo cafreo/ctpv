@@ -191,8 +191,10 @@ emerge --ask --verbose app-misc/ctpv
 
 Add these lines to your lf config
 (usually located at `~/.config/lf/lfrc`).
+For version r38 or lower you don't need to disable preload.
 
 ```
+set preload false
 set previewer ctpv
 set cleaner ctpvclear
 &ctpv -s $id
