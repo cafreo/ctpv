@@ -85,9 +85,9 @@ setup_image() {
 	[ "${image_method}" = "${image_method_ueberzug}" ] && setup_fifo "$@"
 }
 
-#kitty_icat_pid() {
-#	printf '/tmp/ctpvicat.%d' "${id}"
-#}
+kitty_icat_pid() {
+	printf '/tmp/ctpvicat.%s' "$id"
+}
 
 send_image() {
 	noimages && return 127
@@ -101,7 +101,7 @@ send_image() {
 		"${image_method_kitty}")
 			kitty +kitten icat --silent --stdin no --transfer-mode memory \
 				--place "${w}x${h}@${x}x${y}" "$1" < /dev/null > /dev/tty &
-			#printf '%d\n' "$!" > "$(kitty_icat_pid)" 
+			printf '%d\n' "$!" > "$(kitty_icat_pid)" 
 			return 1
 			;;
 		"${image_method_chafa}")
